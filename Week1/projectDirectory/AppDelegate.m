@@ -35,13 +35,29 @@
     NSLog(@"Hours Per Year:%.0f", hoursPerYear);
     //Initial float value
     NSLog(@"Hours Per Week:%.1f", hoursPerWeek);
-    
-    //AND and OR comparison
+        
     //float data type
+    float salary = 46188.66;
+    
     //int data type
+    
+    
     //BOOL data type
+    BOOL fullTime = YES;
+    
     //if, else if, and else check
+    //AND comparison
+    if((fullTime == NO) || (salary <= 30000)){
+        NSLog(@"You have a lower class job!");
+    //OR comparison
+    }else if((fullTime == YES) && (salary > 30000)){
+        NSLog(@"You have a middle to upper class job!");
+    }else{
+        NSLog(@"Cannot conclude whether you have a job or what class it may be.");
+    }
+    
     //single for loop
+    
     //nested loop
     //while loop that increments int value
     
