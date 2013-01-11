@@ -25,6 +25,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    
     //float data type
     float salary = 46188.66;
     float hoursPerWeek = 37.5f;
@@ -33,10 +34,10 @@
     int duties = 4;
     int daysLeftInWeek = 7;
     int weeksInYear = 52;
+    int chant = 1;
     
     //BOOL data type
     BOOL fullTime = YES;
-    
     
     //casting float to int
     float hoursPerYear = (int)(hoursPerWeek * weeksInYear);
@@ -70,13 +71,26 @@
     }
     
     //while loop that increments int value
-    
+    while(chant < 4){
+        //NSLog(@"%d", x);
+        chant++;
+        if(chant==2){
+            NSLog(@"Ready!");
+        }else if(chant==3){
+            NSLog(@"Set!");
+        }else{
+            NSLog(@"Go!");
+        }
+    }
     
     //nested loop
     for(int z=7; z<= daysLeftInWeek; z--){
         NSLog(@"There are %d days left in the week!", z);
         if(z < 1){
             break;
+        }
+        for(int y=1; y < 3; y++){
+            NSLog(@"%d Hooray!", y);
         }
     }
     
