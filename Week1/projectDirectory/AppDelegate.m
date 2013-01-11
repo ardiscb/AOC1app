@@ -5,6 +5,8 @@
 //  Created by Courtney Ardis on 1/7/13.
 //  Copyright (c) 2013 Courtney Ardis. All rights reserved.
 //
+//  AOC1 1301
+//  Project 1
 
 #import "AppDelegate.h"
 
@@ -23,10 +25,18 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    
-    int weeksInYear = 52;
-    //variable using float data type
+    //float data type
+    float salary = 46188.66;
     float hoursPerWeek = 37.5f;
+    
+    //int data type
+    int duties = 4;
+    int daysLeftInWeek = 7;
+    int weeksInYear = 52;
+    
+    //BOOL data type
+    BOOL fullTime = YES;
+    
     
     //casting float to int
     float hoursPerYear = (int)(hoursPerWeek * weeksInYear);
@@ -35,16 +45,6 @@
     NSLog(@"Hours Per Year:%.0f", hoursPerYear);
     //Initial float value
     NSLog(@"Hours Per Week:%.1f", hoursPerWeek);
-    
-    //float data type
-    float salary = 46188.66;
-    
-    //int data type
-    int duties = 4;
-    int daysLeftInWeek = 7;
-    
-    //BOOL data type
-    BOOL fullTime = YES;
     
     //if, else if, and else check
     //AND comparison
@@ -63,11 +63,14 @@
         NSLog(@"Today, you have %d duties to do.", x);
     }
     
-    //while loop that increments int value
+    //while loop that decrements int value
     while(duties > 0){
         NSLog(@"You completed duty number %d", duties);
         duties--;
     }
+    
+    //while loop that increments int value
+    
     
     //nested loop
     for(int z=7; z<= daysLeftInWeek; z--){
