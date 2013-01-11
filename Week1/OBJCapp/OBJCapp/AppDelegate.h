@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  aoc1App
+//  OBJCapp
 //
-//  Created by Courtney Ardis on 1/7/13.
+//  Created by Courtney Ardis on 1/11/13.
 //  Copyright (c) 2013 Courtney Ardis. All rights reserved.
 //
 

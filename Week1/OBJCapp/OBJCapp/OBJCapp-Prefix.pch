@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'aoc1App' target in the 'aoc1App' project
+// Prefix header for all source files of the 'OBJCapp' target in the 'OBJCapp' project
 //
 
 #import <Availability.h>

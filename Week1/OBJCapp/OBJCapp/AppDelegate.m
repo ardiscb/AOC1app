@@ -1,12 +1,10 @@
 //
 //  AppDelegate.m
-//  aoc1App
+//  OBJCapp
 //
-//  Created by Courtney Ardis on 1/7/13.
+//  Created by Courtney Ardis on 1/11/13.
 //  Copyright (c) 2013 Courtney Ardis. All rights reserved.
 //
-//  AOC1 1301
-//  Project 1
 
 #import "AppDelegate.h"
 
@@ -24,7 +22,6 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
     
     //float data type
     float salary = 46188.66;
@@ -93,7 +90,7 @@
             NSLog(@"%d Hooray!", y);
         }
     }
-    
+
     return YES;
 }
 
@@ -105,7 +102,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

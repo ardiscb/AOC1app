@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:aoc1App.xcodeproj">
+      location = "self:OBJCapp.xcodeproj">
    </FileRef>
 </Workspace>
