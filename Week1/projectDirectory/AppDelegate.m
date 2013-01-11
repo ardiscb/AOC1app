@@ -35,12 +35,12 @@
     NSLog(@"Hours Per Year:%.0f", hoursPerYear);
     //Initial float value
     NSLog(@"Hours Per Week:%.1f", hoursPerWeek);
-        
+    
     //float data type
     float salary = 46188.66;
     
     //int data type
-    
+    int duties = 4;
     
     //BOOL data type
     BOOL fullTime = YES;
@@ -49,7 +49,7 @@
     //AND comparison
     if((fullTime == NO) || (salary <= 30000)){
         NSLog(@"You have a lower class job!");
-    //OR comparison
+        //OR comparison
     }else if((fullTime == YES) && (salary > 30000)){
         NSLog(@"You have a middle to upper class job!");
     }else{
@@ -57,11 +57,20 @@
     }
     
     //single for loop
+    for (int x=1; x<= duties; x++)
+    {
+        NSLog(@"You have %d duties to do.", x);
+    }
     
     //nested loop
+    
+    
     //while loop that increments int value
-    
-    
+    while(duties > 0){
+        NSLog(@"You completed duty number %d", duties);
+        duties--;
+        
+    }
     
     return YES;
 }
@@ -74,7 +83,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
