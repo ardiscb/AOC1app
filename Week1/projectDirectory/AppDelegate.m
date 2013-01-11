@@ -41,6 +41,7 @@
     
     //int data type
     int duties = 4;
+    int daysLeftInWeek = 7;
     
     //BOOL data type
     BOOL fullTime = YES;
@@ -59,17 +60,21 @@
     //single for loop
     for (int x=1; x<= duties; x++)
     {
-        NSLog(@"You have %d duties to do.", x);
+        NSLog(@"Today, you have %d duties to do.", x);
     }
-    
-    //nested loop
-    
     
     //while loop that increments int value
     while(duties > 0){
         NSLog(@"You completed duty number %d", duties);
         duties--;
-        
+    }
+    
+    //nested loop
+    for(int z=7; z<= daysLeftInWeek; z--){
+        NSLog(@"There are %d days left in the week!", z);
+        if(z < 1){
+            break;
+        }
     }
     
     return YES;
