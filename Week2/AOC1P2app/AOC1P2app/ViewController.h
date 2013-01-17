@@ -14,6 +14,8 @@
             *authorLabel,
             *authorLabelB,
             *publishedLabel,
-            *publishedLabelB;
+            *publishedLabelB,
+            *summaryLabel,
+            *summaryLabelB;
 }
 @end

@@ -89,6 +89,33 @@
     //Attach publishedLabel B to ViewController
     [self.view addSubview:publishedLabelB];
     
+    //Create summaryLabel
+    summaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 110.0f, 100.0f, 20.0f)];
+    //Check to see whether summaryLabel is no nil
+    if(summaryLabel != nil)
+    {
+        //If not nil, add left aligned justified "Summary:"
+        summaryLabel.text = @"Summary:";
+        summaryLabel.textAlignment = NSTextAlignmentLeft;
+        summaryLabel.backgroundColor = [UIColor brownColor];
+    }
+    //Attach summaryLabel to ViewController
+    [self.view addSubview:summaryLabel];
+    
+    //Create summaryLabelB
+    summaryLabelB = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 140.0f, 300.0f, 100.0f)];
+    //Check to see whether summaryLabelB is no nil
+    if(summaryLabelB != nil)
+    {
+        //If not nil, add center aligned text spanning multiple lines
+        summaryLabelB.text = @"The tale of a banished albino prince as he travels the world with his soul-stealing sword seeking vengenance on those who caused his downfall.";
+        summaryLabelB.textAlignment = NSTextAlignmentCenter;
+        summaryLabelB.backgroundColor = [UIColor blueColor];
+        summaryLabelB.numberOfLines = 4;
+    }
+    //Attach summaryLabelB to ViewController
+    [self.view addSubview:summaryLabelB];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
