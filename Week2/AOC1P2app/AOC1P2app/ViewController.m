@@ -20,7 +20,7 @@
     self.view.backgroundColor = [UIColor purpleColor];
 
     //Create bookTitleLabel
-    bookTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.f, 300.0f, 30.f)];
+    bookTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 300.0f, 30.f)];
     //Check to see whether bookTitleLabel is not nil
     if (bookTitleLabel != nil)
     {
@@ -31,6 +31,63 @@
     //Attach bookTitleLabel to ViewController
     [self.view addSubview:bookTitleLabel];
     
+    
+    //Create authorLabel
+    authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 50.0f, 300.0f, 20.0f)];
+    //Check to see whether authorLabel is not nil
+    if (authorLabel != nil)
+    {
+        //If not nil, add right aligned justified "Author:"
+        authorLabel.text = @"Author:";
+        authorLabel.textAlignment = NSTextAlignmentRight;
+        authorLabel.backgroundColor = [UIColor lightGrayColor];
+    }
+    //Attach authorLabel to ViewController
+    [self.view addSubview:authorLabel];
+    
+    //Create authorLabelB
+    authorLabelB = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 50.0f, 200.0f, 20.0f)];
+    //Check to see whether authorLabelB is not nil
+    if (authorLabelB != nil)
+    {
+        //If not nil, add left aligned justified author of book text
+        authorLabelB.text = @"Michael Moorcock";
+        //Error when using NSTextAlignmentJustified or NSTextAlignmentNatural
+        //authorLabelB.textAlignment = NSTextAlignmentJustified;
+        //[authorLabelB setTextAlignment:NSTextAlignmentJustified];
+        authorLabelB.backgroundColor = [UIColor yellowColor];
+    }
+    //Attach authorLabelB to ViewController
+    [self.view addSubview:authorLabelB];
+    
+    //Create publishedLabel
+    publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 80.0f, 300.0f, 20.0f)];
+    //Check to see whether publishedLabel is not nil
+    if (publishedLabel != nil)
+    {
+        //If not nil, add right aligned justified "Publisher:"
+        publishedLabel.text = @"Publisher:";
+        publishedLabel.textAlignment = NSTextAlignmentRight;
+        publishedLabel.backgroundColor = [UIColor magentaColor];
+        
+    }
+    //Attach publishedLabel to ViewController
+    [self.view addSubview:publishedLabel];
+    
+    //Create publishedLabelB
+    publishedLabelB = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 80.0f, 200.0f, 20.0f)];
+    //Check to see whether publishedLabelB is not nil
+    if(publishedLabelB != nil)
+    {
+        //If not nil, add left aligned justified date of publication text
+        publishedLabelB.text = @"1984";
+        publishedLabelB.textAlignment = NSTextAlignmentLeft;
+        //publishedLabelB.textAlignment = NSTextAlignmentJustified;
+        publishedLabelB.backgroundColor = [UIColor orangeColor];
+
+    }
+    //Attach publishedLabel B to ViewController
+    [self.view addSubview:publishedLabelB];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
