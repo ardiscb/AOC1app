@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA48742616A4DE7500D034FC"
-               BuildableName = "OBJCIapp2.app"
-               BlueprintName = "OBJCIapp2"
-               ReferencedContainer = "container:OBJCIapp2.xcodeproj">
+               BlueprintIdentifier = "FA4874EB16A79EB600D034FC"
+               BuildableName = "AOC1P2app.app"
+               BlueprintName = "AOC1P2app"
+               ReferencedContainer = "container:AOC1P2app.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA48742616A4DE7500D034FC"
-            BuildableName = "OBJCIapp2.app"
-            BlueprintName = "OBJCIapp2"
-            ReferencedContainer = "container:OBJCIapp2.xcodeproj">
+            BlueprintIdentifier = "FA4874EB16A79EB600D034FC"
+            BuildableName = "AOC1P2app.app"
+            BlueprintName = "AOC1P2app"
+            ReferencedContainer = "container:AOC1P2app.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,10 +51,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA48742616A4DE7500D034FC"
-            BuildableName = "OBJCIapp2.app"
-            BlueprintName = "OBJCIapp2"
-            ReferencedContainer = "container:OBJCIapp2.xcodeproj">
+            BlueprintIdentifier = "FA4874EB16A79EB600D034FC"
+            BuildableName = "AOC1P2app.app"
+            BlueprintName = "AOC1P2app"
+            ReferencedContainer = "container:AOC1P2app.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,10 +69,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA48742616A4DE7500D034FC"
-            BuildableName = "OBJCIapp2.app"
-            BlueprintName = "OBJCIapp2"
-            ReferencedContainer = "container:OBJCIapp2.xcodeproj">
+            BlueprintIdentifier = "FA4874EB16A79EB600D034FC"
+            BuildableName = "AOC1P2app.app"
+            BlueprintName = "AOC1P2app"
+            ReferencedContainer = "container:AOC1P2app.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
