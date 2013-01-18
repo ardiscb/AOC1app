@@ -28,6 +28,7 @@
         //If not nil, add centered aligned text
         bookTitleLabel.text = @"The Elric Saga Part 2";
         bookTitleLabel.textAlignment = NSTextAlignmentCenter;
+        bookTitleLabel.textColor = [UIColor blackColor];
     }
     //Attach bookTitleLabel to ViewController
     [self.view addSubview:bookTitleLabel];
@@ -42,6 +43,7 @@
         authorLabel.text = @"Author:";
         authorLabel.textAlignment = NSTextAlignmentRight;
         authorLabel.backgroundColor = [UIColor lightGrayColor];
+        authorLabel.textColor = [UIColor redColor];
     }
     //Attach authorLabel to ViewController
     [self.view addSubview:authorLabel];
@@ -53,10 +55,8 @@
     {
         //If not nil, add left aligned justified author of book text
         authorLabelB.text = @"Michael Moorcock";
-        //Error when using NSTextAlignmentJustified or NSTextAlignmentNatural
-        //authorLabelB.textAlignment = NSTextAlignmentJustified;
-        //[authorLabelB setTextAlignment:NSTextAlignmentJustified];
         authorLabelB.backgroundColor = [UIColor yellowColor];
+        authorLabelB.textColor = [UIColor colorWithRed:0.321 green:0.677 blue:0.257 alpha:1];
     }
     //Attach authorLabelB to ViewController
     [self.view addSubview:authorLabelB];
@@ -70,6 +70,7 @@
         publishedLabel.text = @"Published:";
         publishedLabel.textAlignment = NSTextAlignmentRight;
         publishedLabel.backgroundColor = [UIColor magentaColor];
+        publishedLabel.textColor = [UIColor colorWithRed:0.151 green:0.141 blue:0.512 alpha:1];
         
     }
     //Attach publishedLabel to ViewController
@@ -83,8 +84,8 @@
         //If not nil, add left aligned justified date of publication text
         publishedLabelB.text = @"1984";
         publishedLabelB.textAlignment = NSTextAlignmentLeft;
-        //publishedLabelB.textAlignment = NSTextAlignmentJustified;
         publishedLabelB.backgroundColor = [UIColor orangeColor];
+        publishedLabelB.textColor = [UIColor greenColor];
 
     }
     //Attach publishedLabel B to ViewController
@@ -98,7 +99,8 @@
         //If not nil, add left aligned justified "Summary:"
         summaryLabel.text = @"Summary:";
         summaryLabel.textAlignment = NSTextAlignmentLeft;
-        summaryLabel.backgroundColor = [UIColor brownColor];
+        summaryLabel.backgroundColor = [UIColor colorWithRed:0.231 green:0.322 blue:0.462 alpha:1];
+        summaryLabel.textColor = [UIColor brownColor];
     }
     //Attach summaryLabel to ViewController
     [self.view addSubview:summaryLabel];
@@ -112,6 +114,7 @@
         summaryLabelB.text = @"The tale of a banished albino prince as he travels the world with his soul-stealing sword seeking vengenance on those who caused his downfall.";
         summaryLabelB.textAlignment = NSTextAlignmentCenter;
         summaryLabelB.backgroundColor = [UIColor blueColor];
+        summaryLabelB.textColor = [UIColor whiteColor];
         summaryLabelB.numberOfLines = 4;
     }
     //Attach summaryLabelB to ViewController
@@ -128,11 +131,13 @@
     //Create NSArray of 5 items
     NSArray *bookItemsArray = [[NSArray alloc] initWithObjects:bookItem1, bookItem2, bookItem3, bookItem4, bookItem5, nil];
     
+    //Create NSMutableString
     NSMutableString *itemMutableString = [[NSMutableString alloc] init];
     
-    //Add commas between the NSArray
+    //Loop through itemMutableString
     for (int i=0; i<5; i++){
         [itemMutableString appendString:[bookItemsArray objectAtIndex:i]];
+        //Add commas between the NSArray
         if (i<3)
         {
             [itemMutableString appendString:@", "];
@@ -154,6 +159,7 @@
         listOfItemsLabel.text = @"List of Items:";
         listOfItemsLabel.textAlignment = NSTextAlignmentLeft;
         listOfItemsLabel.backgroundColor = [UIColor cyanColor];
+        listOfItemsLabel.textColor = [UIColor colorWithRed:0.831 green:0.081 blue:0.301 alpha:1];
     }
     //Attach listOfItems to ViewController
     [self.view addSubview:listOfItemsLabel];
@@ -166,8 +172,9 @@
         //If not nil, add center aligned list of items from the mutable array
         listOfItemsLabelB.text = itemMutableString;
         listOfItemsLabelB.textAlignment = NSTextAlignmentCenter;
-        listOfItemsLabelB.backgroundColor = [UIColor darkGrayColor];
+        listOfItemsLabelB.backgroundColor = [UIColor colorWithRed:0.123 green:0.497 blue:0.251 alpha:1];
         listOfItemsLabelB.numberOfLines = 2;
+        listOfItemsLabelB.textColor = [UIColor darkGrayColor];
     }
     //Attach listOfItemsB to ViewController
     [self.view addSubview:listOfItemsLabelB];
