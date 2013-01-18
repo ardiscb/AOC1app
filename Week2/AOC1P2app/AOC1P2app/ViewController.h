@@ -16,6 +16,8 @@
             *publishedLabel,
             *publishedLabelB,
             *summaryLabel,
-            *summaryLabelB;
+            *summaryLabelB,
+            *listOfItemsLabel,
+            *listOfItemsLabelB;
 }
 @end
