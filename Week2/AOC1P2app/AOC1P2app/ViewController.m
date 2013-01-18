@@ -82,7 +82,7 @@
     if(publishedLabelB != nil)
     {
         //If not nil, add left aligned justified date of publication text
-        publishedLabelB.text = @"1984";
+        publishedLabelB.text = @"January 1984";
         publishedLabelB.textAlignment = NSTextAlignmentLeft;
         publishedLabelB.backgroundColor = [UIColor orangeColor];
         publishedLabelB.textColor = [UIColor greenColor];
@@ -106,16 +106,16 @@
     [self.view addSubview:summaryLabel];
     
     //Create summaryLabelB
-    summaryLabelB = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 140.0f, 300.0f, 100.0f)];
+    summaryLabelB = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 140.0f, 300.0f, 130.0f)];
     //Check to see whether summaryLabelB is not nil
     if(summaryLabelB != nil)
     {
         //If not nil, add center aligned text spanning multiple lines
-        summaryLabelB.text = @"The tale of a banished albino prince as he travels the world with his soul-stealing sword seeking vengenance on those who caused his downfall.";
+        summaryLabelB.text = @"The tale of a banished albino prince as he travels the world with his soul-stealing sword seeking vengenance on those who caused his downfall. His quest eventually leads to his own death and the end of the world.";
         summaryLabelB.textAlignment = NSTextAlignmentCenter;
         summaryLabelB.backgroundColor = [UIColor blueColor];
         summaryLabelB.textColor = [UIColor whiteColor];
-        summaryLabelB.numberOfLines = 4;
+        summaryLabelB.numberOfLines = 6;
     }
     //Attach summaryLabelB to ViewController
     [self.view addSubview:summaryLabelB];
@@ -151,7 +151,7 @@
     }
     
     //Create listOfItemsLabel
-    listOfItemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 250.0f, 100.0f, 20.0f)];
+    listOfItemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 280.0f, 100.0f, 20.0f)];
     //Check to see whether summaryLabelB is not nil
     if(listOfItemsLabel != nil)
     {
@@ -165,7 +165,7 @@
     [self.view addSubview:listOfItemsLabel];
     
     //Create listOfItemsLabelB
-    listOfItemsLabelB = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 280.0f, 300.0f, 50.0f)];
+    listOfItemsLabelB = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 310.0f, 300.0f, 50.0f)];
     //Check to see whether summaryLabelB is not nil
     if(listOfItemsLabelB != nil)
     {
