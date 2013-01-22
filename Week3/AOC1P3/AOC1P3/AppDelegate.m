@@ -24,6 +24,24 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    
+    //Practice 6
+    //Returns a single int value
+//    int returnValue = [ViewController returnInteger];
+//    NSLog(@"%d", returnValue);
+    //END Pracice 6
+    
+    // Example video code
+    //Instance functions - needs more information than it's passing in
+//    int returnValue = [self.viewController printDebugInfo:@"Hello from the AppDelegate" numLines:5];
+//    
+//    float widthValue = [self.viewController getWidthFromCGRect:CGRectMake(0, 0, 354.0f, 200.0f)];
+    
+    //Declared with + instead of -
+    //Static functions - does not need any other information
+//    int originX = [ViewController getXValueFromCGRect:CGRectMake(0, 0, 200.0f, 250.0f           )];
+    // END example video code
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

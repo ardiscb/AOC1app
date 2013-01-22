@@ -9,5 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    
+}
+//Example video code
+//Declare functions here
+//- (void)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines;
+//- (int)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines;
+//
+//- (float)getWidthFromCGRect:(CGRect)rect;
+//
+//+ (int)getXValueFromCGRect:(CGRect)rect;
+//END example video code
+
+- (int)add:(NSInteger)thisInt thatInt:(NSInteger)thatInt;
 
 @end
