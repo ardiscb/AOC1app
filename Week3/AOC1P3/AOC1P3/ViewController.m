@@ -26,13 +26,30 @@
     //Return result
     return result;
 }
-//END Practice 6
 
+//Compare function: takes two ints, returns YES or NO based on whether the values are equal
+-(BOOL)compare:(NSInteger)thisInt thatInt:(NSInteger)thatInt
+{
+    //Prints values of ints, asking if they are equal
+    NSLog(@"Do %d and %d equal each other.", thisInt, thatInt);
+    //If they are equal, logs "YES" and returns YES
+    if(thisInt == thatInt)
+    {
+        NSLog(@"Yes");
+        return YES;
+    //If they are not equal, logs "NO" and returns NO
+    }else
+    {
+        NSLog(@"No");
+        return NO;
+    }
+}
 
 - (void)viewDidLoad
 {
     //Sets parameters
     [self add:4 thatInt:2];
+    [self compare: 3 thatInt:3];
     
     //Example video code
     
