@@ -32,7 +32,7 @@
 }
 
 //Compare function: takes two ints, returns YES or NO based on whether the values are equal
--(BOOL)compare:(NSInteger)thisInt thatInt:(NSInteger)thatInt
+- (BOOL)compare:(NSInteger)thisInt thatInt:(NSInteger)thatInt
 {
     //Prints values of ints, asking if they are equal
     NSLog(@"Do %d and %d equal each other.", thisInt, thatInt);
@@ -66,7 +66,7 @@
     //Displays append alert
     [self displayAlertWithString:mutableAppendedString];
 }
-//displayAlertWithString function - takes an NSString as the parameter
+//displayAlertWithString function: takes an NSString as the parameter
 - (void)displayAlertWithString:(NSString*)string
 {
     //creates an alert view
@@ -79,44 +79,14 @@
 
 - (void)viewDidLoad
 {
-    //Sets parameters
+    //call functions, set parameters
     [self add:4 thatInt:2];
     [self compare: 3 thatInt:3];
     [self append:@"Append this string to " thatString:@"that string."];
     
-    //Example video code
-    
-    //[self printDebugInfo:@"this is a debug string" numLines:5];
-    
-    //END example vidoe code
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
-//Example video code
-//Two parameter function
-//- (void)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines
-//{
-//    NSLog(@"%@", debugString);
-//}
-//- (int)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines
-//{
-//    NSLog(@"%@", debugString);
-//
-//    return 4;
-//}
-//
-//- (float)getWidthFromCGRect:(CGRect)rect
-//{
-//    return rect.size.width;
-//}
-//
-//+ (int)getXValueFromCGRect:(CGRect)rect
-//{
-//    return (int)rect.origin.x;
-//}
-//END example video code
 
 - (void)didReceiveMemoryWarning
 {
