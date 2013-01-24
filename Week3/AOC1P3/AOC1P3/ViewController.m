@@ -22,7 +22,11 @@
 {
     //Add thisInt to thatInt
     int result = thisInt + thatInt;
-    NSLog(@"%d + %d = %d", thisInt, thatInt, result);    
+    NSLog(@"%d + %d = %d", thisInt, thatInt, result);
+    //Convert result into NSString
+    NSString *convertNumber = [[NSString alloc] initWithFormat:@"The number is %d", result];
+    //displays the result of adding two numbers in an alert
+    [self displayAlertWithString:convertNumber];
     //Return result
     return result;
 }
@@ -36,13 +40,15 @@
     if(thisInt == thatInt)
     {
         NSString *trueStatment = [[NSString alloc] initWithFormat:@"The numbers %d and %d are equal.", thisInt, thatInt];
-       [self displayAlertWithString:trueStatment];
+        //display compare = true alert
+        [self displayAlertWithString:trueStatment];
         NSLog(@"Yes");
         return YES;
-    //If they are not equal, logs "NO" and returns NO
+        //If they are not equal, logs "NO" and returns NO
     }else
     {
         NSString *falseStatment = [[NSString alloc] initWithFormat:@"The numbers %d and %d are not equal.", thisInt, thatInt];
+        //display compare = false alert
         [self displayAlertWithString:falseStatment];
         NSLog(@"No");
         return NO;
@@ -57,6 +63,8 @@
     [mutableAppendedString appendString:thatString];
     //Log appended strings
     NSLog(@"%@", mutableAppendedString);
+    //Displays append alert
+    [self displayAlertWithString:mutableAppendedString];
 }
 //displayAlertWithString function - takes an NSString as the parameter
 - (void)displayAlertWithString:(NSString*)string
@@ -95,7 +103,7 @@
 //- (int)printDebugInfo:(NSString*)debugString numLines:(NSInteger)numLines
 //{
 //    NSLog(@"%@", debugString);
-//    
+//
 //    return 4;
 //}
 //
@@ -109,7 +117,6 @@
 //    return (int)rect.origin.x;
 //}
 //END example video code
-
 
 - (void)didReceiveMemoryWarning
 {
