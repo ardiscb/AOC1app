@@ -23,5 +23,7 @@
 //END example video code
 
 - (int)add:(NSInteger)thisInt thatInt:(NSInteger)thatInt;
+- (void)append:(NSString*)thisString thatString:(NSString*)thatString;
+
 
 @end

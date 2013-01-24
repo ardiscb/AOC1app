@@ -35,13 +35,37 @@
     //If they are equal, logs "YES" and returns YES
     if(thisInt == thatInt)
     {
+        NSString *trueStatment = [[NSString alloc] initWithFormat:@"The numbers %d and %d are equal.", thisInt, thatInt];
+       [self displayAlertWithString:trueStatment];
         NSLog(@"Yes");
         return YES;
     //If they are not equal, logs "NO" and returns NO
     }else
     {
+        NSString *falseStatment = [[NSString alloc] initWithFormat:@"The numbers %d and %d are not equal.", thisInt, thatInt];
+        [self displayAlertWithString:falseStatment];
         NSLog(@"No");
         return NO;
+    }
+}
+//Append function: takes two NSStrings and returns a new NSString containing the appended strings using an NSMutableString and the Append method
+- (void)append:(NSString*)thisString thatString:(NSString*)thatString
+{
+    //Append strings using NSMutableString
+    NSMutableString *mutableAppendedString = [[NSMutableString alloc] init];
+    [mutableAppendedString appendString:thisString];
+    [mutableAppendedString appendString:thatString];
+    //Log appended strings
+    NSLog(@"%@", mutableAppendedString);
+}
+//displayAlertWithString function - takes an NSString as the parameter
+- (void)displayAlertWithString:(NSString*)string
+{
+    //creates an alert view
+    UIAlertView *displayStringAlert = [[UIAlertView alloc] initWithTitle:@"Alert" message:string delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    if (displayStringAlert != nil)
+    {
+        [displayStringAlert show];
     }
 }
 
@@ -50,6 +74,7 @@
     //Sets parameters
     [self add:4 thatInt:2];
     [self compare: 3 thatInt:3];
+    [self append:@"Append this string to " thatString:@"that string."];
     
     //Example video code
     
