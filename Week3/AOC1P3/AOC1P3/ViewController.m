@@ -84,6 +84,9 @@
     [self compare: 3 thatInt:3];
     [self append:@"Append this string to " thatString:@"that string."];
     
+    //Use return values from add and compare function
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
