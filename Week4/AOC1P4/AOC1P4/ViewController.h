@@ -14,6 +14,7 @@
             *dateLabel,
             *emptyUsername,
             *instructLabel,
+            *infoLabel,
             *loggedIn;
     
 }

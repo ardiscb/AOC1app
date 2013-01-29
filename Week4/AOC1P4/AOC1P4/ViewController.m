@@ -35,6 +35,7 @@
     }
     
     //create username text field
+    
 //    UITextField *usernameInput = [[UITextField alloc] initWithFrame:CGRectMake(30.0f, 10.0f, 90.0f, 30.0f)];
 //    if(usernameInput != nil)
 //    {
@@ -82,10 +83,6 @@
         [self.view addSubview:showDate];
     }
     
-//    dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 30.0f, 300.0f, 30.0f)];
-//    [self.view addSubview:dateLabel];
-    
-    
     //create information button
     UIButton *infoBtn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     if(infoBtn != nil)
@@ -96,6 +93,9 @@
         [infoBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:infoBtn];
     }
+    
+    //create info label
+    infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 380.0f, 320.0f, 80.0f)];
     
        [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -152,6 +152,17 @@
         {
             [dateAlert show];
         }
+    }
+    else if (button.tag == BUTTON_TWO)
+    {
+        if(infoLabel != nil)
+        {
+            infoLabel.text = @"This application was created:\nCourtney Ardis";
+            infoLabel.backgroundColor = [UIColor lightGrayColor];
+            infoLabel.textAlignment = NSTextAlignmentCenter;
+            infoLabel.numberOfLines = 2;
+        }
+        [self.view addSubview:infoLabel];
     }
     
 }
