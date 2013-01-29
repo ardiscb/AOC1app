@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 {
     UILabel *username,
+            *dateLabel,
             *emptyUsername,
             *instructLabel,
             *loggedIn;
