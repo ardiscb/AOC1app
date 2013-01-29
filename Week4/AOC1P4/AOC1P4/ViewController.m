@@ -23,7 +23,7 @@
     self.view.backgroundColor = [UIColor lightGrayColor];
     
     //create username label
-    username = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 10.0f, 90.0f, 30.0f)];
+    username = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 90.0f, 30.0f)];
     if(username != nil)
     {
         //add username label text
@@ -35,14 +35,13 @@
     }
     
     //create username text field
-    
-//    UITextField *usernameInput = [[UITextField alloc] initWithFrame:CGRectMake(30.0f, 10.0f, 90.0f, 30.0f)];
-//    if(usernameInput != nil)
-//    {
-//        
-//    }
+    usernameInput = [[UITextField alloc] initWithFrame:CGRectMake(100.0f, 10.0f, 210.0f, 30.0f)];
+    if(usernameInput != nil)
+    {
+        usernameInput.borderStyle = UITextBorderStyleRoundedRect;
+        [self.view addSubview:usernameInput];
+    }
     //add username label to view
-//    [self.view addSubview:usernameInput];
     
     //create Login button
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -76,7 +75,7 @@
     if(showDate != nil)
     {
         //position showDate
-        showDate.frame = CGRectMake(5.0f, 250.0f, 90.0f, 40.0f);
+        showDate.frame = CGRectMake(10.0f, 250.0f, 90.0f, 40.0f);
         [showDate setTitle:@"Show Date" forState:UIControlStateNormal];
         showDate.tag = BUTTON_ONE;
         [showDate addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -88,11 +87,16 @@
     if(infoBtn != nil)
     {
         //position infoBtn
-        infoBtn.frame = CGRectMake(10.0f, 350.0f, 20.0f, 20.0f);
+        infoBtn.frame = CGRectMake(15.0f, 350.0f, 20.0f, 20.0f);
         infoBtn.tag = BUTTON_TWO;
         [infoBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:infoBtn];
     }
+    //create empty username label
+    emptyUsername = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 120.0f, 320.0f, 70.0f)];
+    
+    //create logged in label
+    loggedIn = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 120.0f, 320.0f, 70.0f)];
     
     //create info label
     infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 380.0f, 320.0f, 80.0f)];
@@ -107,21 +111,12 @@
     //do what you need to do when the button is clicked
     if (button.tag == BUTTON_ZERO)
     {
-        //create onClick event label
-        emptyUsername = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 120.0f, 320.0f, 70.0f)];
-        loggedIn = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 120.0f, 320.0f, 70.0f)];
+        
+        //collect usernameInput text
+        NSString *usernameText = [usernameInput text];
         //fix so that if username text field is empty, display first
         //and if username text field is not empty, display second(else)
-        if(emptyUsername != nil)
-        {
-            //add label text
-            emptyUsername.text = @"Username cannot be empty";
-            //change label background color
-            emptyUsername.backgroundColor = [UIColor whiteColor];
-            //align label text center
-            emptyUsername.textAlignment = NSTextAlignmentCenter;
-        }
-        else
+        if(usernameInput.text != nil)
         {
             //add label text
             loggedIn.text = @"Username has been logged in";
@@ -129,9 +124,20 @@
             loggedIn.backgroundColor = [UIColor whiteColor];
             //align label text center
             loggedIn.textAlignment = NSTextAlignmentCenter;
+            //add loggedIn to view
+            [self.view addSubview:loggedIn];
         }
-        //add emptyUsername to view
-        [self.view addSubview:emptyUsername];
+        else
+        {
+            //add label text
+            emptyUsername.text = @"Username cannot be empty";
+            //change label background color
+            emptyUsername.backgroundColor = [UIColor whiteColor];
+            //align label text center
+            emptyUsername.textAlignment = NSTextAlignmentCenter;
+            //add emptyUsername to view
+            [self.view addSubview:emptyUsername];
+        }
     }
     else if (button.tag == BUTTON_ONE)
     {

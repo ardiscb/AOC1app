@@ -17,5 +17,7 @@
             *infoLabel,
             *loggedIn;
     
+    UITextField *usernameInput;
+    
 }
 @end
