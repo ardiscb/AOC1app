@@ -5,6 +5,7 @@
 //  Created by Courtney Ardis on 1/28/13.
 //  Copyright (c) 2013 Courtney Ardis. All rights reserved.
 //
+//  AOC1 1301 Project 4
 
 #import "ViewController.h"
 
@@ -137,7 +138,7 @@
         usernameText = [usernameInput text];
         //fix so that if username text field is empty, display first
         //and if username text field is not empty, display second(else)
-        if(usernameText != nil)
+        if(usernameText.length > 0)
         {
             if(loggedIn != nil)
             {
