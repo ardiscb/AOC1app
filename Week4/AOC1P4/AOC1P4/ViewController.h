@@ -19,5 +19,13 @@
     
     UITextField *usernameInput;
     
+    UIButton *loginBtn,
+             *showDate,
+             *infoBtn;
+    NSString *usernameText;
+    NSMutableString *mutableAppendedString;
+    
 }
+- (void)append:(NSString*)thisString thatString:(NSString*)thatString;
+
 @end

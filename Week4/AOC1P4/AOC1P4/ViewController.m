@@ -17,6 +17,17 @@
 
 @implementation ViewController
 
+- (void)append:(NSString*)thisString thatString:(NSString*)thatString
+{
+    //Append strings using NSMutableString
+    mutableAppendedString = [[NSMutableString alloc] init];
+    [mutableAppendedString appendString:thisString];
+    [mutableAppendedString appendString:thatString];
+    //Log appended strings
+    NSLog(@"%@", mutableAppendedString);
+
+}
+
 - (void)viewDidLoad
 {
     //change background color
@@ -44,7 +55,7 @@
     //add username label to view
     
     //create Login button
-    UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    loginBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if(loginBtn != nil)
     {
         //position loginBtn
@@ -71,7 +82,7 @@
     }
     
     //create show date button
-    UIButton *showDate = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    showDate = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if(showDate != nil)
     {
         //position showDate
@@ -83,7 +94,7 @@
     }
     
     //create information button
-    UIButton *infoBtn = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    infoBtn = [UIButton buttonWithType:UIButtonTypeInfoLight];
     if(infoBtn != nil)
     {
         //position infoBtn
@@ -92,6 +103,7 @@
         [infoBtn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:infoBtn];
     }
+
     //create empty username label
     emptyUsername = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 120.0f, 320.0f, 70.0f)];
     
@@ -101,10 +113,19 @@
     //create info label
     infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 380.0f, 320.0f, 80.0f)];
     
-       [super viewDidLoad];
+    //Close keyboard when clicked off usernameInput UITextField
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
+    [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
+//closeKeyboard function
+//lowers keyboard when usernameInput is not active
+-(void)closeKeyboard {
+    [usernameInput resignFirstResponder];
+}
 //onClick function
 -(void)onClick:(UIButton*)button
 {
@@ -113,43 +134,55 @@
     {
         
         //collect usernameInput text
-        NSString *usernameText = [usernameInput text];
+        usernameText = [usernameInput text];
         //fix so that if username text field is empty, display first
         //and if username text field is not empty, display second(else)
-        if(usernameInput.text != nil)
+        if(usernameText != nil)
         {
-            //add label text
-            loggedIn.text = @"Username has been logged in";
-            //change label background color
-            loggedIn.backgroundColor = [UIColor whiteColor];
-            //align label text center
-            loggedIn.textAlignment = NSTextAlignmentCenter;
-            //add loggedIn to view
-            [self.view addSubview:loggedIn];
+            if(loggedIn != nil)
+            {
+                [self append:usernameText thatString:@" has been logged in"];
+                //add label text
+                loggedIn.text = mutableAppendedString;
+    //          NSLog(@"%@ has been logged in", usernameText);
+                //change label background color
+                loggedIn.backgroundColor = [UIColor whiteColor];
+                //align label text center
+                loggedIn.textAlignment = NSTextAlignmentCenter;
+                //add loggedIn to view
+                [self.view addSubview:loggedIn];
+            }
         }
         else
         {
-            //add label text
-            emptyUsername.text = @"Username cannot be empty";
-            //change label background color
-            emptyUsername.backgroundColor = [UIColor whiteColor];
-            //align label text center
-            emptyUsername.textAlignment = NSTextAlignmentCenter;
-            //add emptyUsername to view
-            [self.view addSubview:emptyUsername];
+            if(emptyUsername != nil)
+            {
+                //add label text
+                emptyUsername.text = @"Username cannot be empty";
+                //change label background color
+                emptyUsername.backgroundColor = [UIColor whiteColor];
+                //align label text center
+                emptyUsername.textAlignment = NSTextAlignmentCenter;
+                //add emptyUsername to view
+                [self.view addSubview:emptyUsername];
+            }
         }
     }
     else if (button.tag == BUTTON_ONE)
     {
         //create NSDate
         NSDate *date = [NSDate date];
-        //format date
+        //format date with NSDateFormatter
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         if(dateFormatter != nil)
         {
             //custom date formatter
             //[dateFormatter setDateFormat:@"EEEE yyyy.MM.dd zzz"];
+            
+            //format date
             [dateFormatter setDateStyle:NSDateFormatterFullStyle];
+            //format time
+            [dateFormatter setTimeStyle:NSDateFormatterLongStyle];
         }
         //create alert view to show for when button 1 is clicked
         UIAlertView *dateAlert = [[UIAlertView alloc] initWithTitle:@"Today's Date" message:[dateFormatter stringFromDate:date]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];

@@ -8,23 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AOC1P4/ViewController.m"
-         timestampString = "381113434.841319"
+         timestampString = "381205485.619977"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "2"
-         endingLineNumber = "2">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "AOC1P4/ViewController.m"
-         timestampString = "381125669.270222"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "104"
-         endingLineNumber = "104"
-         landmarkName = "-viewDidLoad"
+         startingLineNumber = "137"
+         endingLineNumber = "137"
+         landmarkName = "-onClick:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -32,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AOC1P4/ViewController.m"
-         timestampString = "381125891.391002"
+         timestampString = "381205485.619977"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "155"
-         endingLineNumber = "155"
+         startingLineNumber = "146"
+         endingLineNumber = "146"
          landmarkName = "-onClick:"
          landmarkType = "5">
       </FileBreakpoint>
